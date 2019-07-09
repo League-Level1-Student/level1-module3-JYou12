@@ -30,7 +30,7 @@ public class Jukebox implements Runnable, ActionListener {
 	JButton button1 = new JButton();
 	JButton button2 = new JButton();
 	
-	Song song = new Song("Switchfoot - Dare You To Move (Alt. Version).mp3");
+	Song song = new Song("Switchfoot - Dark Horses.mp3");
 	Song song2 = new Song("Switchfoot - Meant To Live [Official Audio].mp3");
 
     public void run() {
@@ -50,7 +50,7 @@ public class Jukebox implements Runnable, ActionListener {
     	
     	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     	frame.setVisible(true);    	
-    	button1.setText("Dare you to move");
+    	button1.setText("Dark Horses");
     	button2.setText("Meant ot live");
     	
     	button1.addActionListener(this);
