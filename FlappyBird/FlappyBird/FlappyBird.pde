@@ -1,5 +1,9 @@
+PImage bird;
 void setup(){
   size(400, 500);
+  bird = loadImage("clipart358893.png");
+  bird.resize(50,50);
+  
 }
 
 int birdX = 150;
@@ -10,21 +14,22 @@ int gravity = 3;
 int pipeX = 500;
 int pipeY = 0;
 int pipeSpeed = 2;
-int upperPipeHeight = (int) random(100, 400);
+int upperPipeHeight = (int) random(200, 400);
 int pipeGap = 100;
 int score = 0;
 
 int lpipeY = upperPipeHeight + pipeGap;
 
 void draw(){
-text("Score: " + score, 100, 100);
 
   //bird
 birdY += gravity;  
 background(12, 178, 198);
+text("Score: " + score, 10, 15);
 fill(234, 229, 43);
 stroke(0, 0, 0);
-ellipse(birdX, birdY, 50, 50);
+//ellipse(birdX, birdY, 50, 50);
+image (bird, birdX, birdY);
 
 //pipe
 fill(0, 200, 0);
@@ -39,7 +44,7 @@ rect(pipeX, lpipeY, 50, upperPipeHeight);
 
 if(pipeX <= 0){
   pipeX = 400;
-  upperPipeHeight = (int) random(100, 400);
+  upperPipeHeight = (int) random(200, 400);
   lpipeY = upperPipeHeight + pipeGap;
   score++;
 }
